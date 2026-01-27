@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import PublicApiCard from '@/components/PublicApiCard';
+import Logo from '@/components/Logo';
 import { ApiItem, ApiCheckResult } from '@/lib/types';
 import { RefreshCw, Search, LayoutGrid, Heart, Sparkles, ArrowRight } from 'lucide-react';
 import { AnimatePresence, motion } from 'framer-motion';
@@ -109,6 +110,16 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center space-y-6 py-10"
         >
+          <div className="flex justify-center mb-2">
+            <motion.div
+              initial={{ scale: 0.8, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{ delay: 0.2, type: "spring", stiffness: 100 }}
+            >
+              <Logo size={100} className="drop-shadow-2xl" />
+            </motion.div>
+          </div>
+          
           <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full glass-dark text-sakura-dark text-xs font-black tracking-widest uppercase">
             <Sparkles size={14} />
             <span>实时服务状态监测</span>

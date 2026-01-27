@@ -3,6 +3,7 @@
 import React from 'react';
 import { Activity, LayoutDashboard, Settings, Github, LogOut, Home } from 'lucide-react';
 import Link from 'next/link';
+import Logo from './Logo';
 
 interface NavbarProps {
   onLogout?: () => void;
@@ -14,9 +15,7 @@ export default function Navbar({ onLogout, isAdmin = false }: NavbarProps) {
     <nav className="flex items-center justify-between px-6 py-4 mb-8 glass rounded-[1.5rem] shadow-lg border border-white/40">
       <div className="flex items-center space-x-3">
         <Link href="/" className="flex items-center space-x-2 group">
-          <div className="bg-gradient-to-br from-sakura to-pink-600 p-2 rounded-xl shadow-lg group-hover:scale-110 transition-transform">
-            <Activity className="w-5 h-5 text-white" />
-          </div>
+          <Logo size={42} className="group-hover:scale-110 transition-transform duration-300" />
           <span className="text-xl font-black bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-gray-500">
             Vertex <span className="text-sakura-dark">Status</span>
           </span>

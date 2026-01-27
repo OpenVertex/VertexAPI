@@ -3,8 +3,12 @@ import "./globals.css";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Vertex API Manager - ACG Edition",
+  title: "Vertex Status - ACG API Manager",
   description: "Beautiful API management system with anime style",
+  icons: {
+    icon: '/icon',
+    apple: '/apple-icon',
+  },
 };
 
 export default function RootLayout({
